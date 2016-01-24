@@ -71,7 +71,6 @@ gem "sorcery"
 gem "carrierwave"
 gem "mini_magick"
 gem "fog"
-gem "pg"
 gem "kramdown"
 gem "angularjs-rails"
 gem "delayed_job_active_record"
@@ -87,3 +86,5 @@ gem "rails-assets-nprogress"
 gem "rails-assets-lightbox2"
 gem "rails-assets-lodash"
 gem "rails-assets-restangular"
+
+gem 'eventmachine', '~> 1.0.4'
