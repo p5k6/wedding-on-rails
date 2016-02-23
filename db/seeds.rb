@@ -128,7 +128,7 @@ no_rsvp = Guest.create!({
   name: "no_rsvp",
   invited_to_ceremony: true,
   invited_to_evening: true,
-  group_id: debug.id,
+  group_id: debug_group.id,
   event_id: event.id
 })
 
@@ -137,7 +137,7 @@ rsvp_false = Guest.create!({
   invited_to_ceremony: true,
   invited_to_evening: true,
   event_id: event.id,
-  group_id: debug.id,
+  group_id: debug_group.id,
   rsvp: false
 })
 
@@ -146,14 +146,14 @@ rsvp_true = Guest.create!({
   invited_to_ceremony: true,
   invited_to_evening: true,
   event_id: event.id,
-  group_id: debug.id,
+  group_id: debug_group.id,
   rsvp: true
 })
 
 guest_no_rsvp = Guest.create!({
   invited_to_ceremony: true,
   invited_to_evening: true,
-  group_id: debug.id,
+  group_id: debug_group.id,
   event_id: event.id
 })
 
@@ -161,7 +161,7 @@ guest_rsvp_false = Guest.create!({
   invited_to_ceremony: true,
   invited_to_evening: true,
   event_id: event.id,
-  group_id: debug.id,
+  group_id: debug_group.id,
   rsvp: false
 })
 
@@ -169,7 +169,7 @@ guest_rsvp_true = Guest.create!({
   invited_to_ceremony: true,
   invited_to_evening: true,
   event_id: event.id,
-  group_id: debug.id,
+  group_id: debug_group.id,
   rsvp: true
 })
 
