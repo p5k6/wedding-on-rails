@@ -41,31 +41,58 @@ event.primary_venue_photo = venue_photos.last.id
 event.save!
 
 stanfields = Group.create!({
-  event_id: event.id
+  event_id: event.id,
+  name: "Stanfields"
 })
 
 kruses = Group.create!({
+  event_id: event.id,
+  name: "Kruses"
+})
+
+bogues = Group.create!({ event_id: event.id, name: "Bogues" })
+
+jesse = Guest.create!({
+  name: "Jesse Bogue",
+  invited_to_ceremony: true,
+  invited_to_evening: true,
+  group_id: bogues.id,
+  event_id: event.id 
+})
+
+meg = Guest.create!({
+  name: "Meghan Bogue",
+  invited_to_ceremony: true,
+  invited_to_evening: true,
+  group_id: bogues.id,
   event_id: event.id
 })
 
+cizmadia_group = Group.create!({event_id: event.id, name: "Cizmadias" })
 peter = Guest.create!({
   name: "Peter Cizmadia",
   rsvp: true,
   invited_to_ceremony: true,
   invited_to_evening: true,
-  group_id: stanfields.id,
+  group_id: cizmadia_group.id,
   event_id: event.id
 })
+
+jacyln = Guest.create!({
+  name: "Jaclyn Smith",
+  invited_to_ceremony: true,
+  invited_to_evening: true,
+  group_id: peter.group.id,
+  event_id: event.id
+})
+  
 
 owen = Guest.create!({
   name: "Owen Noll",
   invited_to_ceremony: true,
   invited_to_evening: true,
-  group_id: stanfields.id,
   event_id: event.id
 })
-
-
 
 
 amanda = Guest.create!({
@@ -81,20 +108,20 @@ chris = Guest.create!({
   name: "Chris Ostro",
   invited_to_ceremony: true,
   invited_to_evening: true,
-  group_id: kruses.id,
   event_id: event.id
 })
 
-chris_guest = Guest.create!({
-  invited_to_ceremony: true,
-  invited_to_evening: true,
-  group_id: chris.group.id,
-  event_id: event.id
-})
+#chris_guest = Guest.create!({
+#  invited_to_ceremony: true,
+#  invited_to_evening: true,
+#  group_id: chris.group.id,
+#  event_id: event.id
+#})
 
 
-debug = Group.create!({
-  event_id: event.id
+debug_group = Group.create!({
+  event_id: event.id,
+  name: "debug"
 })
 
 no_rsvp = Guest.create!({
