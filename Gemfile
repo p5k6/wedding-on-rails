@@ -53,13 +53,13 @@ end
 group :production do
   # Fix assets on heroku
   # http://stackoverflow.com/questions/18826604/not-deploying-to-heroku-correctly
-  gem "rails_log_stdout",           github: "heroku/rails_log_stdout"
-  gem "rails3_serve_static_assets", github: "heroku/rails3_serve_static_assets"
+  # gem "rails_log_stdout",           github: "heroku/rails_log_stdout"
+  # gem "rails3_serve_static_assets", github: "heroku/rails3_serve_static_assets"
 
-  ###### WARNING:
-  # Include 'rails_12factor' gem to enable all platform features
-  # See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
-  gem "rails_12factor"
+  # ###### WARNING:
+  # # Include 'rails_12factor' gem to enable all platform features
+  # # See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
+  # gem "rails_12factor"
   gem "thin", "~> 1.6.1"
 end
 
