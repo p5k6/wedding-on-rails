@@ -19,11 +19,15 @@ class Event < ActiveRecord::Base
   end
 
   def show_rsvp?
-    return false
-    return true if Rails.env == "development"
+    return true if is_ready?
     return false if in_past?
     return false if is_today?
     return true
+  end
+
+  def is_ready?
+    return true if Rails.env == "development"
+    false
   end
 
   def in_past?

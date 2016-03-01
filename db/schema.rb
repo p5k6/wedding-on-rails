@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215022054) do
+ActiveRecord::Schema.define(version: 20160301083816) do
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20160215022054) do
     t.datetime "updated_at"
     t.boolean  "rsvp",       default: false
     t.integer  "event_id"
-    t.text     "name"
+    t.text     "local_name"
   end
 
   create_table "guests", force: true do |t|

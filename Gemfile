@@ -39,6 +39,8 @@ gem "puma"
 # gem "debugger", group: [:development, :test]
 
 gem "dotenv-rails", group: [:development, :test]
+gem "pry-byebug", group: [:development, :test]
+gem 'pry-rails', :group => :development
 
 group :development do
   gem "better_errors"
