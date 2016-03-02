@@ -24,7 +24,8 @@ app.controller "RsvpController", ["$scope", "Restangular", ($scope, Restangular)
     guest.rsvp = true
     guest.put()
 
-  $scope.toggleVegetarian = (guest) ->
+  $scope.toggleVegetarian = (guest, vege) ->
+    guest.vegetarian = vege
     guest.put()
 
   # Restangular.one('events', 1).one('groups', 3).getList("guests").then (group) ->
@@ -36,6 +37,12 @@ app.controller "RsvpController", ["$scope", "Restangular", ($scope, Restangular)
     return "You have RSVP that you can not attend." if guest.rsvp == false
     return "You have not yet RSVP'd."
 
+  $scope.vegeStatus = (guest) -> 
+    ending = "; Please click below to change"
+    return "Your dietary status is currently set to vegetarian" + ending if guest.vegetarian
+    return "Your dietary status is currently set to not vegetarian" + ending if !guest.vegetarian
+    return "Your dietary status is not currently set"
+
   $scope.rsvpButtonText = (guest) ->
     return "Add guest" if guest.is_guest
     return "Yes I can attend"
@@ -43,4 +50,8 @@ app.controller "RsvpController", ["$scope", "Restangular", ($scope, Restangular)
   $scope.guestName = (guest) ->
     return "Guest" if guest.is_guest
     return guest.name
+
+  $scope.vegetarianButtonText = (guest) ->
+    return "I am vegetarian" if !guest.vegetarian
+    return "I am not vegetarian" if guest.vegetarian
 ]
