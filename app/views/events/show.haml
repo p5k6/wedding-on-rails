@@ -54,11 +54,8 @@
             %span.button{ng: { show: "guest.is_guest", disabled: "newGuest.name == ''", click: "defineGuest(guest)"}} {{ rsvpButtonText(guest) }}
             %p {{ vegeStatus(guest) }}
             %span.button{ng: { click: "toggleVegetarian(guest, !guest.vegetarian)"}} {{ vegetarianButtonText(guest) }} 
-
-            .reset{ng: {show: "guest.rsvp && guest.invited_to_ceremony"}}
-              %label
-                %input{type: "checkbox", ng: {change: "toggleVegetarian(guest)", model: "guest.vegetarian"}}
-                Vegetarian
+            %p 
+            %em.ng-binding If you have further dietary restrictions beyond those listed, please email us at pattyandjosh2016@gmail.com
 
 .box.box--mint
   .row

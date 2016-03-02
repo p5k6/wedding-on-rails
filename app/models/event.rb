@@ -27,7 +27,7 @@ class Event < ActiveRecord::Base
 
   def is_ready?
     return true if Rails.env == "development"
-    false
+    true 
   end
 
   def in_past?
