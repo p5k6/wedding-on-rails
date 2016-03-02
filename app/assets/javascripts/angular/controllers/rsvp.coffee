@@ -6,7 +6,7 @@ app.controller "RsvpController", ["$scope", "Restangular", ($scope, Restangular)
       width: "element"
       minimumInputLength: 3
     .on "change", (e) ->
-      Restangular.one('events', 1).one('groups', e.val).getList("guests").then (group) ->
+      Restangular.one('events', 5).one('groups', e.val).getList("guests").then (group) ->
         $scope.group = group
 
   $scope.newGuest = {
