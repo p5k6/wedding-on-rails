@@ -83,7 +83,7 @@
           <script type="text/javascript">
           (function(){
           function wpgmappity_maps_loaded() {
-          var latlng = new google.maps.LatLng(40.003738, -105.300848);
+          var latlng = new google.maps.LatLng(40.007301, -105.275308);
           var options = {
            center : latlng,
            mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -123,53 +123,17 @@
            {content: '<h3 class="font-book-antiqua">University Memorial Center</h3>'});
            infowindow.open(wpgmappitymap,marker1);
            });
-          var point2 = new google.maps.LatLng(51.4488666,-2.587721999999985);
+          var point2 = new google.maps.LatLng(40.012849, -105.260323);
           var marker2= new google.maps.Marker({
-           icon : 'http://labio-wedding.s3.amazonaws.com/assets/hotel39.png',
+           icon : 'http://patty-josh-2016-wedding.s3.amazonaws.com/assets/hotel39.png',
            position : point2,
            map : wpgmappitymap
            });
           google.maps.event.addListener(marker2,'click',
            function() {
            var infowindow = new google.maps.InfoWindow(
-           {content: '<h3 class="font-book-antiqua">DoubleTree</h3><a target=\"_blank\" href=\"http://doubletree3.hilton.com/en/index.html\">Go to website</a>'});
+           {content: '<h3 class="font-book-antiqua">Millenium Harvest House</h3><a target=\"_blank\" href=\"https://www.millenniumhotels.com/en/boulder/millennium-harvest-house-boulder/\">Go to website</a>'});
            infowindow.open(wpgmappitymap,marker2);
-           });
-          var point3 = new google.maps.LatLng(51.4559676,-2.5847842000000583);
-          var marker3= new google.maps.Marker({
-           icon : 'http://labio-wedding.s3.amazonaws.com/assets/hotel39.png',
-           position : point3,
-           map : wpgmappitymap
-           });
-          google.maps.event.addListener(marker3,'click',
-           function() {
-           var infowindow = new google.maps.InfoWindow(
-           {content: '<h3 class="font-book-antiqua">Bristol Marriott</h3><a target=\"_blank\" href=\"http://www.marriott.com/hotels/travel/brsdt-bristol-marriott-hotel-city-centre/\">Go to website</a>'});
-           infowindow.open(wpgmappitymap,marker3);
-           });
-          var point4 = new google.maps.LatLng(51.4522431,-2.59696770000005);
-          var marker4= new google.maps.Marker({
-           icon : 'http://labio-wedding.s3.amazonaws.com/assets/hotel39.png',
-           position : point4,
-           map : wpgmappitymap
-           });
-          google.maps.event.addListener(marker4,'click',
-           function() {
-           var infowindow = new google.maps.InfoWindow(
-           {content: '<h3 class="font-book-antiqua">Radisson Blu</h3><a target=\"_blank\" href=\"http://www.radissonblu.co.uk/hotel-bristol\">Go to website</a>'});
-           infowindow.open(wpgmappitymap,marker4);
-           });
-          var point5 = new google.maps.LatLng(51.4597989,-2.586416399999962);
-          var marker5= new google.maps.Marker({
-           icon : 'http://labio-wedding.s3.amazonaws.com/assets/hotel39.png',
-           position : point5,
-           map : wpgmappitymap
-           });
-          google.maps.event.addListener(marker5,'click',
-           function() {
-           var infowindow = new google.maps.InfoWindow(
-           {content: '<h3>Holiday Inn</h3><a target=\"_blank\" href=\"http://www.ihg.com/holidayinn/hotels/gb/en/bristol/brscc/hoteldetail\">Go to website</a>'});
-           infowindow.open(wpgmappitymap,marker5);
            });
           }
           window.onload = function() {
@@ -210,6 +174,35 @@
   .row
     .column.small-12
       %p We invite you back to this website after the wedding to view and upload photos
+
+%br
+
+.row
+  .column.small-12.medium-8.medium-offset-2
+    #hotel-copy
+      %h5 Hotel Info 
+      %p 
+        We have arranged for a "Ghost" block at the Millenium Harvest House; 
+        Discounted rates will be honored there until April 20, 2016. 
+        Reservation ID is <strong>1605KRUSTA</strong>. 
+        Please call Millenium directly at 303-998-2480 to arrange.
+      %p 
+        If you'd rather book elsewhere, that's great as well!
+        There are plenty of great Airbnb's available throughout Boulder.
+.row
+  .column.small-12.medium-8.medium-offset-2
+    #reception-copy
+      %h5 Reception Info 
+      %p 
+        The reception will be held at the University Memorial Center, on the south terrace. 
+        See above for parking information. 
+        Reception begins at 2pm, with dinner being served at 4pm.
+.row
+  .column.small-12.medium-8.medium-offset-2
+    #contact-info
+      %h5 Contact Info 
+      %p 
+        If you have any further questions, feel free to contact us at pattyandjosh2016@gmail.com
 
 %br
 
